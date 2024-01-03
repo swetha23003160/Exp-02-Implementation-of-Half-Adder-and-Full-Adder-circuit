@@ -30,8 +30,6 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 #### Figure -02 FULL ADDER 
 
 ### Procedure
-
-
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
@@ -42,7 +40,33 @@ Program to design a half adder and full adder circuit and verify its truth table
 Developed by: swetha.m
 RegisterNumber: 23003160 
 */
+rogram: Half adder:
 
+module Halfadder(A,B,Sum,Carry);
+
+input A,B;
+
+output Sum,Carry;
+
+xor(Sum,A,B);
+
+and(Carry,A,B);
+
+endmodule
+
+Full adder:
+
+module fulladder(A,B,C,Sum,Carry);
+
+input A,B,C;
+
+output Sum,Carry;
+
+assign Sum = ((A^B)^C);
+
+assign Carry = ((A&B)|(B&C)|(C&A));
+
+endmodule
 
 
 
