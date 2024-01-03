@@ -98,3 +98,4 @@ fulladder
 
 
 ### Result:
+To design a half adder and full adder circuit and verify its truth table in quartus using verilog programming.
